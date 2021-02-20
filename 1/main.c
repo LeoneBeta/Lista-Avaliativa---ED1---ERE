@@ -1,3 +1,5 @@
+/*Programa requrido para treinamento do uso de TAD*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "TADHora.h"

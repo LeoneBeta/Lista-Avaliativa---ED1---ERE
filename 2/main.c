@@ -1,3 +1,4 @@
+/*Programa requerido para treinamento de alocação dinâmica*/
 #include <stdio.h>
 #include <stdlib.h>
 
