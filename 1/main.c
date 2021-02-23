@@ -1,4 +1,4 @@
-/*Programa requrido para treinamento do uso de TAD*/
+/*Programa requrido para treinamento do uso de TAD = Exercicio 3*/
 
 #include <stdio.h>
 #include <stdlib.h>

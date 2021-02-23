@@ -1,4 +1,4 @@
-/*Programa requerido para treinamento de alocação dinâmica*/
+/*Programa requerido para treinamento de alocação dinâmica - Exercicio 6*/
 #include <stdio.h>
 #include <stdlib.h>
 

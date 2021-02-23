@@ -1,12 +1,8 @@
-/*Programa requerido para treinamento do uso de Lista Encadeada - Exercicio 3*/
+/*Programa requerido para treinamento do uso de Pilha - Exercicio 9*/
 #include <stdio.h>
 #include <stdlib.h>
-#include "list.h"
-
-
 
 int start(){
-
 
     return 0;
 }
