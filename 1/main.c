@@ -2,9 +2,11 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <locale.h>
 #include "TADHora.h"
 
 int main(){
+    setlocale(LC_ALL,"portuguese");
     THour time;
     int hr, min, sec, advanceSec, day;
     

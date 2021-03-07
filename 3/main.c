@@ -1,6 +1,7 @@
 /*Programa requerido para treinamento do uso de Recursão - Exercicio 13*/
 #include <stdio.h>
 #include <stdlib.h>
+#include <locale.h>
 
 int sumElements(int **mat, int sum, int i, int j){
 
@@ -38,5 +39,6 @@ int start(){
 }
 
 int main(){
+    setlocale(LC_ALL,"portuguese");
     return start();
 }

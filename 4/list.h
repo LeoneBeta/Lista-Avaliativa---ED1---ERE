@@ -4,6 +4,7 @@
 typedef int TKey;
 typedef struct{
     TKey key;
+    char name[20];
 }TElement;
 
 typedef struct Nodo{
@@ -18,18 +19,35 @@ typedef struct{
 
 typedef TList *list;
 
+typedef int TKeyDrum;
+typedef struct{
+    TKey key;
+    int slot;
+}TElementDrum;
+
+typedef struct NodoDrum{
+    TElementDrum info;
+    struct NodoDrum *prior, *next;
+}TNodoDrum;
+
+typedef struct{
+    TNodoDrum *first, *last, *current;
+    int size;
+}TListDrum;
+
+typedef TListDrum *listDrum;
+
 list creatList();
+listDrum creatListDrum();
 int insertStart(list,TElement);
+int insertStartDrum(listDrum,TElementDrum);
 int insertEnd(list,TElement);
-int insertPosition(list,TElement,int);
-int removeElement(list,TKey,TElement*);
+int insertEndDrum(listDrum,TElementDrum);
+int removeElement(list,TKey);
 void deleteList(list);
-int getElement(list,TElement*,int);
-int emptyList(list);
-int fullList(list);
-int getSize(list);
+void deleteListDrum(listDrum);
 int setCurrent(list,int);
-int getCurrent(list,TElement*);
+int setCurrentDrum(listDrum,int);
 
 
 #endif

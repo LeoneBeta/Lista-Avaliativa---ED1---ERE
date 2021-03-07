@@ -1,6 +1,7 @@
 /*Programa requerido para treinamento de alocação dinâmica - Exercicio 6*/
 #include <stdio.h>
 #include <stdlib.h>
+#include <locale.h>
 
 int matriz();
 void allocMatriz(int,int, int *);
@@ -47,6 +48,7 @@ void clearMatriz(int row,int *mat){
     free(mat);
 }
 
-int main(){    
+int main(){   
+    setlocale(LC_ALL,"portuguese"); 
     return matriz();
 }
