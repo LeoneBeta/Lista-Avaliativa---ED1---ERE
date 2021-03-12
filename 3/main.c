@@ -1,4 +1,6 @@
 /*Programa requerido para treinamento do uso de Recursão - Exercicio 13*/
+/*13) Implemente uma função, recursiva, para calcular a soma dos elementos
+de uma matriz 4x5 de inteiros.*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
