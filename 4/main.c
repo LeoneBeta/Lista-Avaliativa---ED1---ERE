@@ -1,4 +1,4 @@
-/*Programa requerido para treinamento do uso de Lista Encadeada - Exercicio 3*/
+/*Programa requerido para treinamento do uso de Lista Encadeada - Exercicio 2*/
 /*O Problema Josephus é um jogo de suicídio em massa que é realizado do seguinte
 modo: n pessoas, numeradas de 1 a n, estão sentadas em uma mesa circular. Iniciando
 da pessoa 1, um revolver contendo uma bala é passado entre elas. Após m passos, a

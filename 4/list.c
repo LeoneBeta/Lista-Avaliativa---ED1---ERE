@@ -11,7 +11,7 @@ list creatList(){
         l->current = NULL;
     }
 }
-
+/*
 listDrum creatListDrum(){
     listDrum l = (listDrum)malloc(sizeof(listDrum));
     if(l){
@@ -21,7 +21,7 @@ listDrum creatListDrum(){
         l->current = NULL;
     }
 }
-
+*/
 int insertStart(list l, TElement e){
     TNodo *n;
     n = (TNodo*)malloc(sizeof(TNodo));
@@ -39,7 +39,7 @@ int insertStart(list l, TElement e){
     }else
         return 0;
 }
-
+/*
 int insertStartDrum(listDrum l, TElementDrum e){
     TNodoDrum *n;
     n = (TNodoDrum*)malloc(sizeof(TNodoDrum));
@@ -57,7 +57,7 @@ int insertStartDrum(listDrum l, TElementDrum e){
     }else
         return 0;
 }
-
+*/
 int insertEnd(list l,TElement e){
     TNodo *n;
     if(l->first == NULL)
@@ -75,7 +75,7 @@ int insertEnd(list l,TElement e){
     }else
         return 0;
 }
-
+/*
 int insertEndDrum(listDrum l,TElementDrum e){
     TNodoDrum *n;
     if(l->first == NULL)
@@ -93,7 +93,7 @@ int insertEndDrum(listDrum l,TElementDrum e){
     }else
         return 0;
 }
-
+*/
 int removeElement(list l, TKey key){
     TNodo *n;
     n = l->first;
@@ -104,7 +104,7 @@ int removeElement(list l, TKey key){
                 l->first = NULL;
                 l->last = NULL;
             }else
-                if(n == l->first){
+                if(n == l->first){ 
                     l->first = l->first->next;
                     l->first->prior = NULL;
                 }else
@@ -132,7 +132,7 @@ void deleteList(list l){
     }
     free(l);
 }
-
+/*
 void deleteListDrum(listDrum l){
     TNodoDrum *n;
     while(l->first){
@@ -142,7 +142,7 @@ void deleteListDrum(listDrum l){
     }
     free(l);
 }
-
+*/
 int setCurrent(list l, int position){
     int i;
     if(position < 1 || position > l->size)
@@ -153,14 +153,15 @@ int setCurrent(list l, int position){
         l->current = l->current->next;
     return 1;
 }
-
+/*
 int setCurrentDrum(listDrum l, int position){
     int i;
     if(position < 1 || position > l->size)
         return 0;
 
-    l->current - l->first;
+    l->current = l->first;
     for(i=1;i<position;i++)
         l->current = l->current->next;
     return 1;
 }
+*/
