@@ -83,7 +83,7 @@ void game(list l, int players){
             drum->current->info.slot = 0;       //Retira o cartucho gasto da posição
 
             posCartucho = (rand()%6)+1;         //Gera outro valor aleatório e insere o cartucho nessa
-            setCurrentDrum(drum,posCartucho);   //posição do drum, assim setando novamente o o ponteiro
+            setCurrentDrum(drum,posCartucho);   //posição do drum, assim setando novamente o ponteiro
             drum->current->info.slot = 1;       //current para o primeiro nodo
             setCurrentDrum(drum,1);
             printf("\nJogador %s colocou uma munição da arma",l->current->info.name);
