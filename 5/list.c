@@ -1,8 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "list.h"
 
 list creatList(){
-    list l = (list)malloc(sizeof(TList));
+    list l = (TList*)malloc(sizeof(TList));
     if(l){
         l->size = 0;
         l->first = NULL;
@@ -10,21 +11,6 @@ list creatList(){
     }
     return l;
 }   
-
-int insertStart(list l, TElement e){
-    TNodo *p;
-    p = (TNodo*)malloc(sizeof(TNodo));
-    if(p){
-        p->info = e;
-        p->next = l->first;
-        l->first = p;
-        if(l->size == 0)
-            l->last = p;
-        l->size++;
-        return 1;
-    }else  
-        return 0;
-}
 
 int insertEnd(list l, TElement e){
     TNodo *p;
@@ -43,50 +29,25 @@ int insertEnd(list l, TElement e){
         return 0;
 }
 
-int insertPosition(list l, TElement e, int position){
-    TNodo *p, *pAux, *ant;
-    int i;
-
-    if(position == 1)
-        return insertStart(l,e);
-    else
-        if(position == l->size+1)
-            return insertEnd(l,e);
-        else
-            if(position < 1 || position > l->size+1)
-                return 0;
-            else{
-                p = (TNodo*)malloc(sizeof(TNodo));
-                if(!p)
-                    return 0;
-                p->info = e;
-                pAux = l->first;
-                for(i=1;i<position;i++){
-                    ant = pAux;
-                    pAux = pAux->next;
-                }
-                p->next = pAux;
-                ant->next = p;
-                l->size++;
-            }
-}
-
 int invertList(list l){
-    TNodo *anterio, *atual, *prox;
+    TNodo *previous, *current, *next;
     int i;
 
-    anterior = l->first;
-    atual = anterior->next;
-    prox = atual->next;
+    previous = l->first;
+    current = previous->next;
+    next = current->next;
+    l->first->next = NULL;
     for(i=0;i<(l->size-1);i++){
-        atual->next = anterior;
-        anterior = atual;
-        atual = prox;
-        prox = prox->next;
+        current->next = previous;
+        previous = current;
+        current = next;
+        if(next == NULL)
+            break;
+        next = next->next;
     }
     l->first->next = NULL;
     l->last = l->first;
-    l->first = anterior;
+    l->first = previous;
    return 0;
 }
 

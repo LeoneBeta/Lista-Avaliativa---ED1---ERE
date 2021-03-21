@@ -10,10 +10,10 @@ int sumElements(int **mat, int sum, int i, int j){
     sum = mat[i][j];
 
     if(i<4){
-            return sumElements(*mat,sum,i+1,j+1);
+            return sumElements(mat,sum,i+1,j+1);
     }else
         if(j<5)
-            return sumElements(*mat,sum,i+1,j+1);
+            return sumElements(mat,sum,i+1,j+1);
         else
             return 0;
     return 0;
@@ -33,7 +33,7 @@ int start(){
     sum = 0;
     i = 0;
     j = 0;
-    result = sumElements(*mat,sum,i,j);
+    result = sumElements(mat,sum,i,j);
 
     printf("\nResultado: %d",result);
 

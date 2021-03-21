@@ -16,7 +16,7 @@ typedef struct{
 }TStack;
 typedef TStack *stack;
 
-stack creatStack();
+stack createStack();
 void endStack(stack);
 int push(stack,TBox);
 int pop(stack,TBox*);

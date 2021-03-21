@@ -3,7 +3,7 @@
 #include "stack.h"
 
 
-stack creatStack(){
+stack createStack(){
     stack s = (stack)malloc(sizeof(TStack));
     if(s){
         s->top = NULL;

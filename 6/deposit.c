@@ -16,13 +16,15 @@ void chega_deposito(TBox box, stack s1, stack s2, stack s3){
             //Percorre a lista 1 retirando as caixas até que chegue numa caixa de tamanho igual a caixa a ser
             //inserida, ou se chegar ao final da pilha, as caixas retiradas da pilha 1 são inseridas na sua
             //determinada pilha
-            while(box.weight != s1->top->info.weight || s1->size != 0){
+            while(box.weight > s1->top->info.weight){
                 pop(s1,boxMove);
                 if(boxMove->weight == 5)
                     push(s2,*boxMove);
                 else
                     if(boxMove->weight == 7)
                         push(s3,*boxMove);
+                if(s1->size == 0)
+                    break;
             }
             push(s1,box);
             //Recoloca as caixas das pilhas auxiliares na pilha principal

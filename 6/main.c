@@ -14,12 +14,13 @@ caixa. Depois, todas as caixas são movidas de volta para a pilhap1.*/
 
 int start(){
     setlocale(LC_ALL,"portuguese");
-    TBox newBox;
-    stack *s1, *s2, *s3;
+    TBox newBox, *box;
+    TStack *s1, *s2, *s3, *aux;
+    int option;
 
-    s1 = creatStack();
-    s2 = creatStack();
-    s3 = creatStack();
+    s1 = createStack();
+    s2 = createStack();
+    s3 = createStack();
 
     if(!s1)
         printf("\nErro ao criar a Pilha 1");
@@ -28,10 +29,24 @@ int start(){
     if(!s3)
         printf("\nErro ao criar a Pilha 3");
 
-    printf("Peso da nova caixa: ");
-    scanf("%d",&newBox.weight);
 
-    chega_deposito(newBox,s1,s2,s3);
+    do{
+        printf("\nDigite 0 para sair");
+        printf("\nPeso da nova caixa: 3, 5 ou 7\n");
+        scanf("%d",&option);
+
+        if(option == 0)
+            break;
+        newBox.weight = option;
+
+        chega_deposito(newBox,s1,s2,s3);
+
+    }while (option != 0);
+
+    do{
+        pop(s1,box);
+        printf("\n%d",box->weight);
+    }while(s1->size != 0);
     return 0;
 }
 

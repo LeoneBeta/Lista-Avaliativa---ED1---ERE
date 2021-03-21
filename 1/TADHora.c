@@ -26,7 +26,7 @@ int addTime(int hour, int minute, int second, THour *ptrTime){
     }
 }
 int advanceTime(int seconds, THour *ptrTime){
-    int advanceHours, advanceMinutes, advanceSeconds, day;
+    int advanceHours, advanceMinutes, advanceSeconds, day = 0;
     int x;
 
     //Faz a separação dos segundos fornecidos nas variaveis respectivas
@@ -43,23 +43,26 @@ int advanceTime(int seconds, THour *ptrTime){
     if(x >= 60){
         advanceMinutes += (x / 60);
         ptrTime->second = (x % 60);
-    }
+    }else
+        ptrTime->second += advanceSeconds;
 
     x = ptrTime->minute + advanceMinutes;
 
     if(x >= 60){
         advanceHours += (x / 60);
         ptrTime->minute = (x % 60);
-    }
+    }else
+        ptrTime->minute += advanceMinutes;
 
     if(advanceHours >= 24){
         day = advanceHours / 24;
         advanceHours %= 24;
         ptrTime->hour += advanceHours; 
-    }
+    }else
+        ptrTime->hour += advanceHours;
 
     return day;
 }
 void printTime(THour *ptrTime){
-    printf("Horario: %d:%d:%d",ptrTime->hour,ptrTime->minute,ptrTime->second);
+    printf("Horario: %d:%d:%d\n",ptrTime->hour,ptrTime->minute,ptrTime->second);
 }

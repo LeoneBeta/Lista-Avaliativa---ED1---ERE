@@ -19,27 +19,28 @@ int start(){
     printf("\nQuantidade de Elementos na Lista: ");
     scanf("%d",&qtde);
 
-    printf("\nInsira os valores");
+    printf("\nInsira os valores\n");
     for(i=0;i<qtde;i++){
         scanf("%d",&value);
         insertEnd(l,value);
     }
 
     aux = l->first;
-
     printf("\nValores Inseridos");
-    for(i=0;i<qtde;i++){
-        printf("%d",aux->info);
+    for(i=1;i<=qtde;i++){
+        printf("\n%d",aux->info);
         aux = aux->next;
     }
 
     invertList(l);
 
+    aux = l->first;
     printf("\nValores Invertidos");
     for(i=0;i<qtde;i++){
-        printf("%d",aux->info);
+        printf("\n%d",aux->info);
         aux = aux->next;
     }
+    printf("\n");
 
     return 0;
 }
