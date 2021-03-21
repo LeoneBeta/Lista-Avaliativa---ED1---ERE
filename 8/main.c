@@ -1,6 +1,6 @@
 /*Programa requerido para treinamento do uso de Ordenação Interna - Exercicio 6*/
 /*Implemente o QuickSort, usando outro algoritmo de ordenação(por exemplo, o InsertSort), para pequenas partições
-do vetor, de tamanho menor ou igual a m.*/
+do vetor, de tamanho menor ou igual a m. */
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>

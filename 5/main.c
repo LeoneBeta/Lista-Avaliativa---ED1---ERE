@@ -1,6 +1,6 @@
 /*Programa requerido para treinamento do uso de Lista Encadeada - Exercicio 1.a*/
 /*1.a Implemente uma função para inverter a ordem dos elementos de uma lista linear
-realizando apenas a movimentação dos apontadores.*/
+realizando apenas a movimentação dos apontadores. */
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>

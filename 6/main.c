@@ -5,7 +5,7 @@ ser empilhadas sobre caixas menores. Implemente a função void chega_deposito(C
 pilha p3)que efetue o controle das caixas, de forma que caso uma caixa de maior peso do que uma que já está em
 p1 deva ser empilhada então todas as caixas que estão em p1 são movidas para as pilhas auxiliares p2(contendo
 somente caixas de 5 toneladas) e p3 (contendo somente caixas de 3 toneladas) até que se possa empilhar a nova
-caixa. Depois, todas as caixas são movidas de volta para a pilhap1.*/
+caixa. Depois, todas as caixas são movidas de volta para a pilhap1. */
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>

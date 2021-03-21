@@ -7,7 +7,7 @@ disponíveis sempre no extremo sul do estacionamento. Escreva um algoritmo que p
 deste estacionamento. Cada entrada para o algoritmo contém uma letra ’E’ para entrada ou ’S’ para saída, e o número
 da placa do carro. O programa deve imprimir uma mensagem sempre que um carro chegar ou sair. Quando um carro sair
 do estacionamento, a mensagem deverá incluir o número de vezes em que o carro foi manobrado para fora do estacionamento
-para permitir que os outros carros saíssem.*/
+para permitir que os outros carros saíssem. */
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>

@@ -7,7 +7,7 @@ b. avancar: Para avançar no tempo (deste que no intervalo de um dia). Deve ser 
 quantidade de segundos a ser acrescentado à data.
 c. comparar: Retorna true se dois horários são iguais e false caso contrário;
 d. imprimir: Para imprimir a hora no formato h:m:s.
-Faça um programa para tstar o TAD.*/
+Faça um programa para tstar o TAD. */
 
 
 #include <stdio.h>

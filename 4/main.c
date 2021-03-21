@@ -5,7 +5,7 @@ da pessoa 1, um revolver contendo uma bala é passado entre elas. Após m passos
 pessoa que está com a arma com a bala na agulha comete suicídio, o corpo é removido,
 o ciclo de pessoas se fecha, e o jogo continua com a pessoa que está sentada após o
 elemento que cometeu o suicídio. O último sobrevivente é aquele que permanecerá após
-a morte dos demais.*/
+a morte dos demais. */
 
 #include <stdio.h>
 #include <stdlib.h>
